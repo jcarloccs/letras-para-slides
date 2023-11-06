@@ -68,7 +68,7 @@ janela.iconbitmap(abs_file_path_icone)
 
 # Rótulo para o texto fixo
 legenda = tk.Label(janela, text="Letra da música (coloque o título da música na primeira linha):")
-legenda["font"] = ("Calibri", "14")
+legenda["font"] = ("Calibri", "14", "bold")
 legenda.pack()
 
 # Frame para a barra de rolagem
@@ -76,7 +76,8 @@ frame = tk.Frame(janela)
 frame.pack()
 
 # Caixa de texto grande para inserção de dados
-caixa_texto = tk.Text(frame, height=30, width=60)
+caixa_texto = tk.Text(frame, height=25, width=65)
+caixa_texto["font"] = ("Calibri", "12")
 caixa_texto.pack(side=tk.LEFT)
 
 # Criando um menu contextual
@@ -94,7 +95,7 @@ caixa_texto['yscrollcommand'] = scrollbar_vertical.set
 
 # Botão para submeter o texto inserido
 botao = tk.Button(janela, text="Criar slides", command=clique_botao, background="#555555", foreground="white", width=30)
-botao["font"] = ("Calibri", "18")
+botao["font"] = ("Calibri", "18", "bold")
 botao.pack()
 
 # Iniciar o loop principal da janela
